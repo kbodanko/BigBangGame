@@ -1,0 +1,233 @@
+body{
+margin: 0;
+padding: 0;
+background-image: url(Science-Background.jpg);
+background-size: cover;
+height: 100%;
+width: 100%;
+font-family: 'Gloria Hallelujah', cursive;
+
+}
+p{
+    margin: 0;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.h1wraper{
+display: flex;
+justify-content: space-between;
+    width: 100%;
+    color: white;
+}
+
+wired-button{
+    border-top-left-radius: 255px 55px;
+    border-top-right-radius: 55px 225px;
+    border-bottom-right-radius: 225px 55px;
+    border-bottom-left-radius:55px 255px;
+    color: white;
+    margin: 20px;
+    font-family: 'Gloria Hallelujah', cursive;
+    z-index: 3;
+    background-image: linear-gradient(to left,rgb(255, 208, 0),#b900b9);
+}
+wired-card{
+    font-family: 'Gloria Hallelujah', cursive;
+    color: white;
+}
+#images{
+    color: white;
+    margin: 0 2%;
+    width: 96%;
+}
+
+#img{
+    color: white;
+    width: 88%;
+    margin: 7vh 5%;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    font-family: '3Dumb', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    border-top-left-radius: 255px 55px;
+    border-top-right-radius: 55px 225px;
+    border-bottom-right-radius: 225px 55px;
+    border-bottom-left-radius:55px 255px;
+    padding: 2vh 5vh;
+    margin: 2vh 0;
+}
+.h1_button{
+    width: 100%;
+}
+.bgFilter{
+    background-color: rgba(0, 0, 0, 0.93);
+    background-size: cover;
+    height: 200vh;
+    padding: 0 7vh;
+}
+.sheldon_rules{
+    display: flex;
+    justify-content: center;
+}
+#sheldon{
+    width: 45%;
+    margin-top: 15vh;
+}
+.thanks_button{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    position: absolute;
+    top: 100px;
+    left: 1000px;
+}
+
+.sheldon{
+    display: flex;
+}
+.rules_wraper{
+    display: none;
+}
+.rules{
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+#rules_card{
+    width: 45%;
+    margin-left: 5vh;
+}
+.inner_rules_card{
+    padding: 2vh;
+    font-size: 1rem;
+}
+.play{
+    display: flex;
+    margin: 0 10vh;
+}
+.play_choice_wraper{
+    display: flex;
+    align-items: center;
+    margin: 5vh 0;
+    color: white;
+
+}
+.pics_container{
+ padding: 2vh 0;
+ margin: 0 auto;
+ width: 100%;
+}
+#choice_won{
+    visibility: hidden;
+    color: white;
+    display: flex;
+    justify-content: center;
+align-self: center;
+}
+.info{
+    visibility: hidden;
+    display: flex;
+    font-size: 1.2rem;
+    font-variant: small-caps;
+    padding: 1.5vh;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    border-bottom-right-radius: 225px 15px;
+    border-bottom-left-radius:15px 255px;
+    background-color: rgb(255, 255, 255,.15);
+}
+#choice_won,
+#your_choice,
+#Sheldon_choice{
+    padding: 0 5vh;
+}
+#your_choice,
+#Sheldon_choice{
+    border-left: 1px solid white;
+    display: none;
+}
+#pics_container_filter{
+    width: 100%;
+}
+#pics{
+    display: flex;
+    justify-content: space-around;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    border-bottom-right-radius: 225px 15px;
+    border-bottom-left-radius:15px 255px;
+  }
+.icons{
+    border-radius: 50%;
+    padding: 2vh 2vh 0 0   ;     
+}
+.pics_wraper{
+    transition: .2s;
+    padding:1vh 1vh 0 3vh; 
+    background-size: 290% 100%; 
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    border-bottom-right-radius: 225px 15px;
+    border-bottom-left-radius:15px 255px;
+}
+.pics_wraper:hover{
+    background-color: rgb(255, 255, 255,.2);
+    transition: 1s ;
+    opacity: 1;
+}
+
+.wider-rendered{
+    color: white;
+}
+.underline{
+    height: 2px;
+    background-size: 200% 100%; 
+    transition: .5s;
+    background-position: 100%;
+}
+.pics_wraper:hover>.icons{
+    opacity: 1;
+    transform: scale(.9);
+    cursor: pointer;
+}
+.pics_container_drawn{
+    display: flex;
+    align-content: center;
+    margin-left: 6vh;
+}
+.pics_container_drawn_img{
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    border-bottom-right-radius: 225px 15px;
+    border-bottom-left-radius:15px 255px;
+    border:solid 2px rgba(255, 255, 255, 0.3);
+}
+.pics_container_drawn_img img{
+    border-radius: 50%;
+    padding: 2vh 2vh 0 2vh;
+    width: 128px;
+    height: 128px;
+}
+@media(max-width: 1300px){
+    #sheldon{
+        width: 50%
+    }
+}
+@media(max-width: 1299px){
+    #sheldon{
+        width: 60%;
+    }
+}
+@media(max-width: 999px){
+    #sheldon{
+        width: 80%;
+    }
+}
