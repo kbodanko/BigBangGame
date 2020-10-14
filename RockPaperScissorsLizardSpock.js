@@ -17,13 +17,6 @@ let solution = document.querySelector('.solution');
 
 yourCounter.textContent = yourScore;
 SheldonCounter.textContent = SheldonScore;
-document.addEventListener("keyup", function (event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        console.log(13);
-        play.click();
-    }
-});
 
 button.addEventListener('click', function () {
     header.style.display = 'none';
@@ -67,13 +60,7 @@ function draw() {
 
 
 }
-function changeDisplay() {
-    console.log('run', yourChoice.style.display);
-    if ((SheldonChoice.style.display === 'none') & (yourChoice.style.display === 'none')) { SheldonChoice.style.display = 'inline'; yourChoice.style.display = 'inline'; console.log('inline'); } else if ((SheldonChoice.style.display === 'inline') & (yourChoice.style.display === 'inline')) {
-        SheldonChoice.style.display = 'none'; yourChoice.style.display = 'none'; console.log('none');
-    }
 
-}
 play.addEventListener('click', function () {
     let hideCounter = document.querySelector('.hide_counter');
     playPosition.style.justifyContent = 'space-between';
@@ -84,10 +71,19 @@ play.addEventListener('click', function () {
     document.querySelector('.info').style.visibility = 'visible';
     choiceWon.textContent = 'choose one:';
     choiceWon.style.visibility = 'visible';
-}
+});
 
 
-);
+document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        if (play.style.visibility !== 'hidden') {
+            console.log(13);
+            play.click();
+        }
+    }
+
+});
+
 let paperscissors = 'scissors cuts paper';
 let scissorspaper = 'scissors cuts paper';
 let lizardspock = 'lizard poisons Spock';
