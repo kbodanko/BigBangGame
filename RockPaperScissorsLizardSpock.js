@@ -13,9 +13,16 @@ let yourScore = 0;
 let SheldonScore = 0;
 let vanish = document.querySelector('#vanish');
 let playPosition = document.querySelector('.play_choice_wraper');
+let solution = document.querySelector('.solution');
 
 yourCounter.textContent = yourScore;
 SheldonCounter.textContent = SheldonScore;
+document.addEventListener("keyup", function (event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        play.click();
+    }
+});
 
 button.addEventListener('click', function () {
     header.style.display = 'none';
@@ -23,6 +30,7 @@ button.addEventListener('click', function () {
     rules.style.display = 'block';
     choiceWon.style.display = 'none';
     playPosition.style.display = 'none';
+    solution.style.display = 'none';
 });
 let thanks = document.querySelector('.thanks_button');
 thanks.addEventListener('click', function () {
@@ -31,6 +39,7 @@ thanks.addEventListener('click', function () {
     card.style.display = 'inline-block';
     choiceWon.style.display = 'inline-block';
     playPosition.style.display = 'flex';
+    solution.style.display = 'flex';
 });
 
 let rock = document.querySelector('#rock');
@@ -117,7 +126,7 @@ let icons = [...document.querySelectorAll('.icons')].forEach(function choose(ico
             choosen(event);
 
 
-            if (drawnIcon === choice.id) { choiceWon.textContent = 'Draw'; document.querySelector('.explanation').textContent = choice.id + ' and ' + drawnIcon; } else if ((choice.id === 'paper' & drawnIcon === 'scissors') || (choice.id === 'rock' & drawnIcon === 'paper') || (choice.id === 'scissors' & drawnIcon === 'rock') || (choice.id === 'Spock' & drawnIcon === 'lizard') || (choice.id === 'lizard' & drawnIcon === 'scissors') || (choice.id === 'lizard' & drawnIcon === 'rock') || (choice.id === 'scissors' & drawnIcon === 'Spock') || (choice.id === 'paper' & drawnIcon === 'lizard') || (choice.id === 'Spock' & drawnIcon === 'paper') || (choice.id === 'rock' & drawnIcon === 'spock')) {
+            if (drawnIcon === choice.id) { choiceWon.textContent = 'Draw'; document.querySelector('.explanation').textContent = choice.id + ' and ' + drawnIcon; } else if ((choice.id === 'paper' & drawnIcon === 'scissors') || (choice.id === 'rock' & drawnIcon === 'paper') || (choice.id === 'scissors' & drawnIcon === 'rock') || (choice.id === 'spock' & drawnIcon === 'lizard') || (choice.id === 'lizard' & drawnIcon === 'scissors') || (choice.id === 'lizard' & drawnIcon === 'rock') || (choice.id === 'scissors' & drawnIcon === 'spock') || (choice.id === 'paper' & drawnIcon === 'lizard') || (choice.id === 'spock' & drawnIcon === 'paper') || (choice.id === 'rock' & drawnIcon === 'spock')) {
                 choiceWon.textContent = 'Sheldon won!'; SheldonScore += 1;
                 document.querySelector('.explanation').textContent = eval(choice.id + drawnIcon);
             }
